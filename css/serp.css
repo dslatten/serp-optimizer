@@ -1,0 +1,164 @@
+body {
+    margin-bottom: 1200px;
+}
+
+.jump-container {
+    display: block;
+    position: absolute;
+}
+
+.jump-anchor {
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    background-color: #49afcd;
+    position: relative;
+    top: 0px;
+    left: -30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 2px rgba(0, 0, 0, 0.05);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2f96b4;
+    border-color: rgba(0, 0, 0, 0.2);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+#mofo-serp-data {
+    position: fixed;
+    top: 151px;
+    right: 20px;
+    height: 600px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #2F96B4;
+    z-index: 999999999;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(33, 105, 128, 0.3);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(33, 105, 128, 0.3);
+    box-shadow: 0px 1px 4px 0px rgba(33, 105, 128, 0.3);
+}
+
+#mofo-serp-data .scroll-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid #e5e5e5;
+}
+
+#mofo-buttons {
+    background-color: #eee;
+    border: 1px solid #2F96B4;
+    border-bottom: none;
+    padding-bottom: 1px;
+    cursor: move;
+}
+
+.mofo-button {
+    margin: 4px;
+    float: left;
+}
+
+.mofo-button a {
+    display: inline-block;
+    width: 64px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+    background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+    background-image: linear-gradient(top, #5bc0de, #2f96b4);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2f96b4 #2f96b4 #1f6377;
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.mofo-button a:hover,
+.mofo-button a:active {
+    color: #fff;
+    background-color: #2F96B4;
+    background-image: none;
+}
+
+#close-mofo-table {
+    float: right;
+}
+
+#close-mofo-table a {
+    width: 20px;
+}
+
+#mofo-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#mofo-table table th,
+#mofo-table table td {
+    padding: 4px;
+    border: 1px solid #2F96B4;
+    vertical-align: middle;
+}
+
+#mofo-table table th {
+    background-color: #f0f7f8;
+}
+
+#mofo-table table td {
+    background-color: #fff;
+}
+
+td.col1 a {
+    display: block;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td.col1 { text-align: center; }
+td.col2 { text-align: right;  }
+td.col3 { text-align: left;   }
+td.col4 { text-align: right;  }
+td.col5 { text-align: right;  }
+
+#mofo-table .col3 div {
+    width: 512px;
+}
+
+.citation-container,
+.snippet-container {
+    display: none;
+}
