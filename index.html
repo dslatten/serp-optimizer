@@ -24,13 +24,20 @@
 </head>
 <body>
 
+<div id="mofo_splitter">
 
-<div id="mofo_main_form">
-    
+<div id="mofo_header">
+    <div class="mofo_page">
+        <div id="mofo_intro">
+            <h1>SERP Optimizer</h1>
+        </div>
+        <div id="mofo_main_form">
+            
+        </div>
+    </div>
 </div>
 
-
-<div id="mofo_google">
+<div id="mofo_body">
 <!-- BEGIN GOOGLE CONTENT -->
 <div id="gsr" class="vsh"> <!-- Originally the body tag in SERP -->
     <div id="pocs"></div>
@@ -188,9 +195,39 @@
 <!-- END GOOGLE CONTENT -->
 </div>
 
+
+<div id="mofo_footer">
+    
+</div>
+
+</div>
+
 <script type="text/javascript">
     //<![CDATA[
+
+    // Initialize KendoUI widgets
     $(document).ready(function() {
+    
+        $('#mofo_splitter').kendoSplitter({
+            panes: [
+                {   // Header
+                    collapsible: true,
+                    resizable: true,
+                    size: '120px'
+                },
+                {   // Body (Google SERP content)
+                    collapsible: false,
+                    resizable: true,
+                },
+                {   // Footer
+                    collapsible: true,
+                    resizable: true,
+                    size: '160px'
+                }
+            ],
+            orientation: 'vertical'
+        });
+    
         $('.mofo_date_picker').kendoDatePicker({
             value: '',
             format: 'MMM d, yyyy'
@@ -314,7 +351,8 @@
         };
 
         self.deleteListing = function(listing) {
-            self.listings.remove(listing)
+            $(listing).slideUp('slow');
+            self.listings.remove(listing);
         };
 
     }
