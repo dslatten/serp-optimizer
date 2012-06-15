@@ -1,3 +1,14 @@
+/* ========================================================================== *\
+    Generic styles
+\* ========================================================================== */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
 textarea,
 textarea:focus,
 input,
@@ -5,6 +16,12 @@ input:focus {
     outline: none;
     margin: 0;
 }
+
+
+
+/* ========================================================================== *\
+    Icons
+\* ========================================================================== */
 
 .mofo_icon {
     background-image: url("../lib/kendoui/styles/BlueOpal/sprite.png");
@@ -22,7 +39,7 @@ input:focus {
     background-position: -162px -213px;
 }
 .mofo_icon_left_arrow {
-	background-position: -165px -226px;
+    background-position: -165px -226px;
 }
 .mofo_icon_edit {
     background-position: -35px -2px;
@@ -34,10 +51,45 @@ input:focus {
     background-position: -37px -228px;
 }
 
-/* Mofo UI (form) */
-#mofo_main_form {
-    
+
+
+#mofo_splitter {
+    height: 100%;
 }
+.mofo_page {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+}
+
+
+/* ========================================================================== *\
+    Header
+\* ========================================================================== */
+
+#mofo_header {
+    background-color: #eaf4f9;
+}
+    #mofo_intro {
+        
+    }
+        #mofo_intro h1 {
+            text-align: center;
+            font-size: 64px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            color: #004766;
+        }
+    #mofo_main_form {
+        
+    }
+
+
+/* ========================================================================== *\
+    Body
+\* ========================================================================== */
+
 .mofo_show_edit {
     position: absolute;
     top: 0;
@@ -65,35 +117,16 @@ input:focus {
         color: #2e6279;
         font-size: 10px;
         font-weight: bold;
-	    -webkit-border-radius: 8px;
-	       -moz-border-radius: 8px;
-	            border-radius: 8px;
-	    background-color: #daecf4;
-	    background-image: url("../lib/kendoui/styles/textures/highlight.png");
-	    background-position: 0px 50%;
-	    text-shadow: 0 1px 0 #fff;
-	    border: #94c0d2 1px solid;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        background-color: #daecf4;
+        background-image: url("../lib/kendoui/styles/textures/highlight.png");
+        background-position: 0px 50%;
+        text-shadow: 0 1px 0 #fff;
+        border: #94c0d2 1px solid;
     }
 
-.mofo_listing_form {
-    margin-bottom: 24px;
-    padding: 0;
-    background-color: #f2f2f2;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-    box-shadow: 0px 0px 6px 0px rgba(63, 63, 63, 0.5),
-                0px 0px 6px 0px rgba(255, 255, 255, 1) inset;
-}
-.mofo_listing_form textarea {
-	width: 410px;
-    padding: 4px;
-	font-family: arial, sans-serif;
-    font-size: 13px;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-}
 
 
 
@@ -118,128 +151,149 @@ input:focus {
     float: left;
 }
 
+/* ========================================================================== *\
+    Listing Form
+\* ========================================================================== */
 
-/* form header */
+.mofo_listing_form {
+    margin-bottom: 24px;
+    padding: 0;
+    background-color: #f2f2f2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 0px rgba(63, 63, 63, 0.5),
+                0px 0px 6px 0px rgba(255, 255, 255, 1) inset;
+}
+    .mofo_listing_form textarea {
+        width: 410px;
+        padding: 4px;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
 .mofo_form_header {
     border: #94c0d2 1px solid;
     border-bottom: none;
     -webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-topright: 4px;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     text-shadow: 0 1px 0 #fff;
 }
-.mofo_form_header_title {
-    text-align: center;
-	font-size: 12px;
-	font-weight: bold;
-	color: #2e6279;
-    line-height: 21px;
-    height: 21px;
-}
-.mofo_window_title {
-    width: 100%;
-}
-.mofo_close_button {
-    position: absolute;
-    top: 3px;
-    right: 3px;
-}
+    .mofo_form_header_title {
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: #2e6279;
+        line-height: 21px;
+        height: 21px;
+    }
+    .mofo_window_title {
+        width: 100%;
+    }
+    .mofo_close_button {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+    }
 
-
-/* form body */
 .mofo_form_body {
     border: #94c0d2 1px solid;
-	-webkit-border-bottom-right-radius: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-moz-border-radius-bottomright: 4px;
-	-moz-border-radius-bottomleft: 4px;
-	border-bottom-right-radius: 4px;
-	border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
+    .mofo_title_container {
+        margin: 8px 8px 4px 8px;
+    }
+        .mofo_title_blurred {
+            color: #c3c8f2;
+            border: 1px solid #c3c8f2;
+        }
+        .mofo_title_focused {
+            color: #12c;
+            border: 1px solid #12c;
+        }
+
+    .mofo_url_container {
+        margin: 0 8px 4px 8px;
+    }
+        .mofo_url_blurred {
+            color: #bfe5cc;
+            border: 1px solid #bfe5cc;
+        }
+        .mofo_url_focused {
+            color: #093;
+            border: 1px solid #093;
+        }
+
+    .mofo_description_container {
+        margin: 0 8px 4px 8px;
+    }
+        .mofo_description_blurred {
+            color: #c8c8c8;
+            border: 1px solid #c8c8c8;
+        }
+        .mofo_description_focused {
+            color: #222;
+            border: 1px solid #222;
+        }
+
+    .mofo_date_container {
+        margin: 0 8px 4px 8px;
+    }
+
+    .mofo_buttons_container {
+        margin: 0 8px 4px 8px;
+        padding-top: 8px;
+    }
+        .mofo_add_listing {
+            float: left;
+            margin-right: 4px;
+        }
+        .mofo_delete_listing {
+            float: left;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
 
 
-/* title */
-.mofo_title_container {
-    margin: 8px 8px 4px 8px;
+
+
+    /* ====================================================================== *\
+        Modifications to original Google styles
+    \* ====================================================================== */
+
+    li.g {
+        position: relative;
+    }
+
+    #pocs,
+    #mngb,
+    #tads,
+    .vspib {
+        display: none;
+    }
+
+
+
+/* ========================================================================== *\
+    Footer
+\* ========================================================================== */
+
+#mofo_footer {
+    background: url("img/bg-footer.png") #004766;
 }
-    .mofo_title_blurred {
-        color: #c3c8f2;
-        border: 1px solid #c3c8f2;
-    }
-    .mofo_title_focused {
-        color: #12c;
-        border: 1px solid #12c;
-    }
 
-
-
-/* url */
-.mofo_url_container {
-    margin: 0 8px 4px 8px;
-}
-    .mofo_url_blurred {
-        color: #bfe5cc;
-        border: 1px solid #bfe5cc;
-    }
-    .mofo_url_focused {
-        color: #093;
-        border: 1px solid #093;
-    }
-
-
-
-/* description */
-.mofo_description_container {
-    margin: 0 8px 4px 8px;
-}
-    .mofo_description_blurred {
-        color: #c8c8c8;
-        border: 1px solid #c8c8c8;
-    }
-    .mofo_description_focused {
-        color: #222;
-        border: 1px solid #222;
-    }
-
-
-
-/* date */
-.mofo_date_container {
-    margin: 0 8px 4px 8px;
-}
-
-
-
-/* buttons */
-.mofo_buttons_container {
-    margin: 0 8px 4px 8px;
-    padding-top: 8px;
-}
-    .mofo_add_listing {
-        float: left;
-        margin-right: 4px;
-    }
-    .mofo_delete_listing {
-        float: left;
-        margin-left: 4px;
-        margin-right: 4px;
-    }
-
-
-
-/* Google SERP mods */
-li.g {
-    position: relative;
-}
-
-/* Hide these unused Google elements */
-#pocs {display:none}
-#mngb {display:none}
-#tads {display:none}
-.vspib {display:none}
 
 

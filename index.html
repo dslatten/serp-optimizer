@@ -24,13 +24,20 @@
 </head>
 <body>
 
+<div id="mofo_splitter">
 
-<div id="mofo_main_form">
-    
+<div id="mofo_header">
+    <div class="mofo_page">
+        <div id="mofo_intro">
+            <h1>SERP Optimizer</h1>
+        </div>
+        <div id="mofo_main_form">
+            
+        </div>
+    </div>
 </div>
 
-
-<div id="mofo_google">
+<div id="mofo_body">
 <!-- BEGIN GOOGLE CONTENT -->
 <div id="gsr" class="vsh"> <!-- Originally the body tag in SERP -->
     <div id="pocs"></div>
@@ -188,40 +195,39 @@
 <!-- END GOOGLE CONTENT -->
 </div>
 
-<div style="display:none">
-    <h2>About the Google SERP Snippet Optimization Tool</h2>
-    <p>The main purpose of the SERP Snippet Optimization Tool is to allow webmasters and content publishers to strategically construct page titles and meta description tags that will result in aesthetically-pleasing or eye-catching listings in Google's organic search results. Using this tool, you can optimize the content of your titles and snippets to maximize your click-through rate (CTR) from Google. In other words, you can increase your organic search engine traffic for a specific keyword...even if you can't improve your rankings. This tactic can be especially useful in situations where you know you'll probably never outrank the sites above yours (e.g. a very strong competitor, a Wikipedia page, a government website, etc.) for certain keywords. In those scenarios, your best option is to make your site's listing stand out from the rest and look as inviting as possible.</p>
-    <h3>Parts of a Google Snippet</h3>
-    <p>Here is a brief explanation of the various elements that can be found in a typical Google Web Search result.</p>
-    <h4>Title</h4>
-    <ul>
-        <li>Google shows up to 70 characters (including spaces) of a page's title in its search results.</li>
-        <li>If a page title exceeds 70 characters, Google will show as many whole words as it can, and the rest are replaced with an ellipsis (...).</li>
-    </ul>
-    <h4>Snippet (Meta Description)</h4>
-    <ul>
-        <li>Google shows up to 156 characters (including spaces) of a page's meta description tag.</li>
-        <li>If a page's meta description tag exceeds 156 characters, Google will show as many whole words as it can, and the rest are replaced with an ellipsis (...).</li>
-        <li>If the web page includes a published-on date, Google may include that date as part of the snippet. In these cases, the date counts as part of the 156 characters.</li>
-        <li>To make sure your web page's snippet can fit a published-on date and the entire meta description (without getting cut off by the ellipsis), keep your meta description tag shorter than 139 characters (or 140 characters, if the published-on date is from a single-digit day of the month).</li>
-    </ul>
-    <h4>Rich Snippet</h4>
-    <ul>
-        <li>Google shows rich snippet text for some types of pages and data, for example: <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=146645">reviews</a>, <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=146646">people</a>, <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=146861">businesses</a>, and <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=164506">events</a>.</li>
-        <li>For information about rich snippets and microformats, see Google's help page on <a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=99170">rich snippets</a>.</li>
-    </ul>
-    <h4>URL</h4>
-    <ul>
-        <li>For sites with a clear information hierarchy, Google may show <a href="http://googleblog.blogspot.com/2009/11/new-site-hierarchies-display-in-search.html">breadcrumb links</a> in the search results.</li>
-        <li>This snippet tool does not currently support any advanced URL features. These may be added in future releases.</li>
-    </ul>
-    <h3>Disclaimer</h3>
-    <p>This snippet tool and the content of this website are not affiliated with Google nor endorsed by them. The Google logo and any other trademarks owned by Google contained herein are used for educational/non-commercial purposes only. I have made every effort to replicate the appearance of Google's search results as accurately as possible, however the information on this website is provided &quot;as is&quot; without any representations or warranties, express or implied.</p>
+
+<div id="mofo_footer">
+    
+</div>
+
 </div>
 
 <script type="text/javascript">
     //<![CDATA[
+
+    // Initialize KendoUI widgets
     $(document).ready(function() {
+    
+        $('#mofo_splitter').kendoSplitter({
+            panes: [
+                {   // Header
+                    collapsible: true,
+                    resizable: true,
+                    size: '120px'
+                },
+                {   // Body (Google SERP content)
+                    collapsible: false,
+                    resizable: true,
+                },
+                {   // Footer
+                    collapsible: true,
+                    resizable: true,
+                    size: '160px'
+                }
+            ],
+            orientation: 'vertical'
+        });
+    
         $('.mofo_date_picker').kendoDatePicker({
             value: '',
             format: 'MMM d, yyyy'
@@ -234,6 +240,7 @@
     //<![CDATA[
 
     // Custom binding for animated visibility transitions
+    // http://knockoutjs.com/documentation/custom-bindings.html
     ko.bindingHandlers.slideVisible = {
         update: function(element, valueAccessor, allBindingsAccessor) {
             // First get the latest data that we're bound to
@@ -344,7 +351,8 @@
         };
 
         self.deleteListing = function(listing) {
-            self.listings.remove(listing)
+            $(listing).slideUp('slow');
+            self.listings.remove(listing);
         };
 
     }
