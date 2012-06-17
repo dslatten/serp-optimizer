@@ -70,7 +70,7 @@
                                     <div id="ires">
 
 
-<ol id="rso" data-bind="foreach: listings">
+<ol id="rso" data-bind="foreach: {data: listings, beforeRemove: slideUpListing}">
     <li class="g">
 
         <!-- showEdit -->
@@ -250,13 +250,18 @@
             var valueUnwrapped = ko.utils.unwrapObservable(value); 
 
             // Grab some more data from another binding property
-            var duration = allBindings.slideDuration || 400; // 400ms is default duration unless otherwise specified
+            // 400ms is default duration unless otherwise specified
+            var duration = allBindings.slideDuration || 400;
 
             // Now manipulate the DOM element
-            if (valueUnwrapped == true) 
-                $(element).slideDown(duration); // Make the element visible
-            else
-                $(element).slideUp(duration);   // Make the element invisible
+            if (valueUnwrapped == true) {
+                // Make the element visible
+                $(element).slideDown(duration);
+            }
+            else {
+                // Make the element invisible
+                $(element).slideUp(duration);
+            }
         }
     };
 
@@ -336,7 +341,7 @@
     // Overall viewmodel for this screen, along with initial state
     function SerpViewModel() {
         var self = this;
-    
+
         self.listings = ko.observableArray([
             new SerpListing()
         ]);
@@ -350,11 +355,16 @@
             });
         };
 
-        self.deleteListing = function(listing) {
-            $(listing).slideUp('slow');
-            self.listings.remove(listing);
+        // http://knockoutjs.com/documentation/foreach-binding.html#note_5_postprocessing_or_animating_the_generated_dom_elements
+        self.slideUpListing = function(nodeToRemove, removedElementIndex, removedElement) {
+            $(nodeToRemove).closest('li.g').slideUp(function() {
+                $(nodeToRemove).remove();
+            })
         };
 
+        self.deleteListing = function(listing) {
+            self.listings.remove(listing);
+        };
     }
     ko.applyBindings(new SerpViewModel());
 
