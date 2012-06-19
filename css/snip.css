@@ -82,8 +82,45 @@ input:focus {
             color: #004766;
         }
     #mofo_main_form {
-        
+        margin-top: 24px;
+        padding: 20px;
+        background-color: #eee;
+        border: 1px solid #ddd;
     }
+        .mofo_col1 {
+            
+        }
+            .mofo_title_limit_container {
+                margin-bottom: 12px;
+            }
+                .mofo_title_limit_container label,
+                .mofo_snippet_limit_container label {
+                    display: block;
+                    margin-bottom: 4px;
+                }
+
+
+/*
+        <div id="mofo_main_form">
+            <div class="mofo_col1">
+                <div class="mofo_title_limit_container">
+                    <label for="titleLimit">Title character limit</label>
+                    <input id="titleLimit" />
+                </div>
+                <div class="mofo_snippet_limit_container">
+                    <label for="snippetLimit">Snippet character limit</label>
+                    <input id="snippetLimit" />
+                </div>
+            </div>
+            <div class="mofo_col1">
+                
+            </div>
+        </div>
+*/
+
+
+
+
 
 
 /* ========================================================================== *\
