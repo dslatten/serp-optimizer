@@ -33,6 +33,7 @@
         </div>
         <div id="mofo_main_form">
             <div class="mofo_col1">
+                <!--
                 <div class="mofo_title_limit_container">
                     <label for="mofo_title_limit">Title character limit</label>
                     <input data-bind="value: titleLimit, valueUpdate: 'afterkeydown'" id="mofo_title_limit" />
@@ -41,6 +42,7 @@
                     <label for="mofo_snippet_limit">Snippet character limit</label>
                     <input data-bind="value: snippetLimit" id="mofo_snippet_limit" />
                 </div>
+                -->
             </div>
             <div class="mofo_col1">
                 
@@ -345,12 +347,7 @@
 
 
         self.descriptionOut = ko.computed(function() {
-            if (self.snippetCount() <= SerpViewModel.snippetLimit()) {
-                return self.descriptionIn();
-            }
-            else {
-                return SerpViewModel.snippetLimit();
-            }
+            return self.descriptionIn();
         }, this);
 
         
@@ -385,8 +382,8 @@
     function SerpViewModel() {
         var self = this;
 
-        self.titleLimit = ko.observable(70);
-        self.snippetLimit = ko.observable(156);
+//        self.titleLimit = ko.observable(70);
+//        self.snippetLimit = ko.observable(156);
 
         self.listings = ko.observableArray([
             new SerpListing()
