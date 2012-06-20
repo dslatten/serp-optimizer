@@ -23,8 +23,9 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
     d.close();
     b = d.body;
 
-    function trim(s) {
-        return s.replace(/}/g, '}\n');
+    function preprocessCSS(s) {
+                                     // http://lesscss.org/#-escaping
+        return s.replace(/}/g, '}\n').replace(/:(.+)\\0\/;/g, ':~"$1;"');
     }
 
     function iff(a, b, c) {
@@ -50,7 +51,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
 
     for (i = 0; i < s.length; ++i) {
 //      add(makeText('h4', 'Inline style sheet'  + iff(' title="', s[i].title, '"')));
-        add(makeText('pre', trim(s[i].innerHTML)));
+        add(makeText('pre', preprocessCSS(s[i].innerHTML)));
     }
 
     for (i = 0; i < ex.length; ++i) {
