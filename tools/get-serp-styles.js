@@ -17,12 +17,13 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
     s = document.getElementsByTagName('style');
     ex = document.getElementsByTagName('link');
     d = window.open().document;
-
-    /*set base href*/
     d.open();
     d.close();
     b = d.body;
 
+    // This function's purpose is to prepare the CSS output in such a way that 
+    // I can copy+paste it into /css/google.less, save it, and my LESS compiler 
+    // (http://wearekiss.com/simpless) won't throw any errors.
     function preprocessCSS(s) {
         s = s.replace(/\s*}\s*/g, '}');
         s = s.replace(/\s*\{\s*/g, '{');
@@ -31,7 +32,6 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
         s = s.replace(/(^\s+|\s+$)/gm, '');
         s = s.replace(/}/g, '}\n');
         s = s.replace(/\{/g, '{\n');
-//        s = s.replace(/\{\s*}/g, '{}');
         s = s.replace(/([^;\{\s])}/g, '$1;}');
         s = s.replace(/;/g, ';\n');
         s = s.replace(/:(.+)\\0\/(;|})/g, ':~"$1\\0/";'); // http://lesscss.org/#-escaping
