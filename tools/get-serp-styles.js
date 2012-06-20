@@ -25,7 +25,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
 
     function preprocessCSS(s) {
                                      // http://lesscss.org/#-escaping
-        return s.replace(/}/g, '}\n').replace(/;/g, ';\n').replace(/:(.+)\\0\/;/g, ':~"$1\0/;"');
+        return s.replace(/}/g, '}\n').replace(/;/g, ';\n').replace(/:(.+)\\0\/;/g, ':~"$1\\0/";');
     }
 
     function iff(a, b, c) {
