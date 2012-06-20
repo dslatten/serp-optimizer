@@ -25,13 +25,13 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
 
     function preprocessCSS(s) {
         s = s.replace(/\s*}\s*/g, '}');
-        s = s.replace(/\s*{\s*/g, '{');
+        s = s.replace(/\s*\{\s*/g, '{');
         s = s.replace(/\s*;\s*/g, ';');
         s = s.replace(/\s*:\s*/g, ':');
         s = s.replace(/(^\s+|\s+$)/gm, '');
         s = s.replace(/}/g, '}\n');
-        s = s.replace(/{/g, '{\n');
-        s = s.replace(/([^;{])}/g, '$1;}');
+        s = s.replace(/\{/g, '{\n');
+        s = s.replace(/([^;\{])}/g, '$1;}');
         s = s.replace(/;/g, ';\n');
         s = s.replace(/:(.+)\\0\/(;|})/g, ':~"$1\\0/";'); // http://lesscss.org/#-escaping
         s = s.replace(/^0;$/gm, ''); // For whatever reason (typo?), Google had a CSS property of "0". This kills it to prevent LESS compiler error.
