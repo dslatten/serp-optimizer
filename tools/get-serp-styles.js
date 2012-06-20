@@ -37,6 +37,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
         s = s.replace(/:(.+)\\0\/(;|})/g, ':~"$1\\0/";'); // http://lesscss.org/#-escaping
         s = s.replace(/:\+(.+);/g, ':~"+$1";');
         s = s.replace(/^0;$/gm, ''); // For whatever reason (typo?), Google had a CSS property of "0". This kills it to prevent LESS compiler error.
+        s = s.replace(/\)background-color:/g, ');\nbackground-color:'); // Another typo (?)
         return s;
     }
 
