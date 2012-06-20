@@ -34,7 +34,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
         s = s.replace(/([^;])}/g, '$1;}');
         s = s.replace(/;/g, ';\n');
         s = s.replace(/:(.+)\\0\/(;|})/g, ':~"$1\\0/";'); // http://lesscss.org/#-escaping
-        s = s.replace(/0;\n/g, '');
+        s = s.replace(/^0;$/g, '');
         return s;
     }
 
