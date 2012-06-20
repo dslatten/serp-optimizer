@@ -24,11 +24,11 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
     b = d.body;
 
     function trim(s) {
-        return s.replace(/^\s*\n/, '').replace(/\s*$/, '');
+        return s.replace(/\n*/g, '').replace(/^\s*/g, '').replace(/\s*$/g, '').replace(/( }|} |;})/g, '}').replace(/( {|{ )/g, '{').replace(/( ,|, )/g, ',');
     }
 
-    function iff(a,b,c) {
-        return b ? a+b+c : '';
+    function iff(a, b, c) {
+        return b ? a + b + c : '';
     }
 
     function add(h) {
@@ -39,7 +39,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
         return d.createElement(t);
     }
 
-    function makeText(tag,text) {
+    function makeText(tag, text) {
         t = makeTag(tag);
         t.appendChild(d.createTextNode(text));
         return t;
@@ -56,10 +56,10 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
     for (i = 0; i < ex.length; ++i) {
         rs = ex[i].rel.split(' ');
         for (j = 0; j < rs.length; ++j) {
-            if (rs[j].toLowerCase()=='stylesheet') {
-                add(makeText('h4','link rel="' + ex[i].rel + '" href="' + ex[i].href + '"' + iff(' title="',ex[i].title,'"')));
-                iframe=makeTag('iframe');
-                iframe.src=ex[i].href;
+            if (rs[j].toLowerCase() == 'stylesheet') {
+                add(makeText('h4', 'link rel="' + ex[i].rel + '" href="' + ex[i].href + '"' + iff(' title="', ex[i].title, '"')));
+                iframe = makeTag('iframe');
+                iframe.src = ex[i].href;
                 add(iframe);
                 break;
             }
