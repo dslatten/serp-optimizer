@@ -24,7 +24,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
     b = d.body;
 
     function trim(s) {
-        return s.replace(/\n*/g, '').replace(/^\s*/g, '').replace(/\s*$/g, '').replace(/(\s*}|}\s*|;})/g, '}').replace(/(\s*{|{\s*)/g, '{').replace(/(\s*,|,\s*)/g, ',');
+        return s.replace(/\n*/g, '').replace(/^\s*/g, '').replace(/\s*$/g, '').replace(/( }|} |;})/g, '}').replace(/( {|{ )/g, '{').replace(/( ,|, )/g, ',');
     }
 
     function iff(a, b, c) {
