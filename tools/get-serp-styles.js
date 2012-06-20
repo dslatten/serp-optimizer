@@ -30,7 +30,7 @@ document.getElementsByTagName('head')[0].removeChild(getSerpStyle);
         s = s.replace(/}/g, '}\n');
         s = s.replace(/\{/g, '{\n');
         s = s.replace(/;/g, ';\n');
-        s = s.replace(/\B}/g, '\n}');
+        s = s.replace(/}/g, '\n}');
         s = s.replace(/(^\s+|\s+$)/gm, '');
         return s;
     }
