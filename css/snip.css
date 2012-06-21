@@ -75,11 +75,21 @@ input:focus {
         
     }
         #mofo_intro h1 {
+            margin-bottom: 0;
             text-align: center;
             font-size: 64px;
             font-family: Georgia, serif;
             font-weight: bold;
             color: #004766;
+        }
+        #mofo_intro h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 32px;
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-style: italic;
+            color: #666;
         }
     #mofo_main_form {
         margin-top: 24px;
