@@ -36,7 +36,8 @@ function executeWhenLoaded(func) {
 })();
 
 
-
-executeWhenLoaded(function() { 
+function charWidths() {
     alert('jQuery = ' + window.jQuery);
-},'jQuery');
+}
+
+executeWhenLoaded(charWidths, 'jQuery');
