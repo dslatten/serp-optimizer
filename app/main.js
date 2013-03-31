@@ -1,20 +1,15 @@
-﻿requirejs.config({
-    paths: {
-        'text': 'durandal/amd/text'
-    }
-});
+﻿define(function(require) {
+    var app = require('durandal/app'),
+        viewLocator = require('durandal/viewLocator'),
+        system = require('durandal/system'),
+        router = require('durandal/plugins/router');
 
-define(['durandal/app', 'durandal/system', 'durandal/viewLocator'],
-  function (app, system, viewLocator) {
-    
     system.debug(true);
-    
-    app.title = 'SERP Imp Application';
-    app.start().then(function () {
-        //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
-        //Look for partial views in a 'views' folder in the root.
-        viewLocator.useConvention();
 
+    app.start().then(function () {
+        viewLocator.useConvention();
+        router.useConvention();
+        router.mapNav('home');
         app.adaptToDevice();
         app.setRoot('views/shell');
     });
