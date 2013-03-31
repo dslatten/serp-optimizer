@@ -11,6 +11,6 @@
         router.useConvention();
         router.mapNav('home');
         app.adaptToDevice();
-        app.setRoot('views/shell');
+        app.setRoot('shell');
     });
 });
