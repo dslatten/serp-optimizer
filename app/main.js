@@ -1,4 +1,10 @@
-﻿define(function(require) {
+﻿require.config({
+    paths: {
+        'text': 'durandal/amd/text'
+    }
+});
+
+define(function(require) {
     var app = require('durandal/app'),
         viewLocator = require('durandal/viewLocator'),
         system = require('durandal/system'),
