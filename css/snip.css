@@ -24,7 +24,7 @@ input:focus {
 \* ========================================================================== */
 
 .mofo_icon {
-    background-image: url("../lib/kendoui/styles/BlueOpal/sprite.png");
+    /*background-image: url("../lib/kendoui/styles/BlueOpal/sprite.png");*/
     background-repeat: no-repeat;
 }
 .mofo_button_icon {
@@ -32,7 +32,7 @@ input:focus {
     vertical-align: middle;
     width: 13px;
     height: 13px;
-    background-image: url("../lib/kendoui/styles/BlueOpal/sprite.png");
+    /*background-image: url("../lib/kendoui/styles/BlueOpal/sprite.png");*/
     background-repeat: no-repeat;
 }
 .mofo_icon_down_arrow {
@@ -168,7 +168,7 @@ input:focus {
         -moz-border-radius: 8px;
         border-radius: 8px;
         background-color: #daecf4;
-        background-image: url("../lib/kendoui/styles/textures/highlight.png");
+        /*background-image: url("../lib/kendoui/styles/textures/highlight.png");*/
         background-position: 0px 50%;
         text-shadow: 0 1px 0 #fff;
         border: #94c0d2 1px solid;
