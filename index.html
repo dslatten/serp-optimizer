@@ -3,10 +3,409 @@
 <head>
     <meta charset="utf-8" />
     <title>SERP Imp</title>
-    <!-- <link type="text/css" rel="stylesheet" href="/css/style.css" /> -->
+    <meta name="description" content="This tool replicates the appearance of a snippet in Google SERPs, which allows SEOs to optimize a page title and description for maximum click-through rate." />
+    <link rel="canonical" href="http://serpimp.com/" />
+    <!-- Inline styles from Google SERPs -->
+    <link type="text/css" rel="stylesheet" href="css/google.css" />
+    <!-- Mofo styles -->
+    <link type="text/css" rel="stylesheet" href="css/snip.css" />
     <!-- <script type="text/javascript" src="/js/scripts.js"></script> -->
 </head>
 <body>
+<div id="mofo_splitter">
+
+<div id="mofo_header">
+    <div class="mofo_page">
+        <div id="mofo_intro">
+            <hgroup>
+                <h1>SERP Imp</h1>
+                <h2>Google SERP Snippet Optimizer Tool</h2>
+            </hgroup>
+        </div>
+        <div id="mofo_main_form">
+            <div class="mofo_col1">
+                <!--
+                <div class="mofo_title_limit_container">
+                    <label for="mofo_title_limit">Title character limit</label>
+                    <input data-bind="value: titleLimit, valueUpdate: 'afterkeydown'" id="mofo_title_limit" />
+                </div>
+                <div class="mofo_snippet_limit_container">
+                    <label for="mofo_snippet_limit">Snippet character limit</label>
+                    <input data-bind="value: snippetLimit" id="mofo_snippet_limit" />
+                </div>
+                -->
+            </div>
+            <div class="mofo_col1">
+                
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
+
+<div id="mofo_body">
+<!-- BEGIN GOOGLE CONTENT -->
+<div id="gsr" class="vsh"> <!-- Originally the body tag in SERP -->
+    <div id="pocs"></div>
+    <div id="mngb"></div>    
+    <div id="main">
+        <div>
+            <div id="cnt" class="big">
+                <div class="mw">
+                    <div id="sfcnt"></div>
+                    <div id="srchdsc"></div>
+                    <div id="sdb"></div>
+                    <div id="subform_ctrl"></div>
+                </div>
+                <div id="appbar"></div>
+                <div class="mw" id="ucs"></div>
+                <div class="mw">
+                    <div id="arcntc"></div>
+                    <div id="rcnt">
+                        <div id="leftnavc"></div>
+                        <div id="center_col">
+                            <div id="bst"></div>
+                            <span id="taw">
+                                <div class="med"></div>
+                                <div class="c" id="tads"></div>
+                            </span>
+                            <div class="med" id="res" role="main">
+                                <div id="topstuff"></div>
+                                <div id="search">
+                                    <h2 class="hd">Search Results</h2>
+                                    <div id="ires">
+
+
+<ol id="rso" data-bind="foreach: {data: listings, beforeRemove: slideUpListing}">
+    <li class="g">
+
+        <!-- showEdit -->
+        <div data-bind="visible: showingEdit" class="mofo_show_edit">
+            <span class="mofo_icon mofo_icon_left_arrow"></span>
+            <div class="mofo_click_to_edit">
+                <span class="mofo_icon mofo_icon_edit"></span>
+                Click&#x00a0;to&#x00a0;edit
+            </div>
+        </div>
+
+        <!-- BEGIN Form -->
+        <div data-bind="slideVisible: showingListingForm, slideDuration:600" class="mofo_listing_form">
+
+            <div class="mofo_form_header k-header">
+                <div class="mofo_form_header_title">
+                    <span class="mofo_window_title">EDIT SERP LISTING</span>
+                </div>
+                <div class="mofo_close_button">
+                    <div class="k-window-actions">
+                        <a href="#" data-bind="click: toggleListingForm" class="k-window-action k-link"><span class="k-icon k-close">Close</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mofo_form_body">
+
+                <!-- Title input -->
+                <div class="mofo_title_container">
+                    <div class="mofo_col1">
+                        <textarea data-bind="value: titleIn, valueUpdate: 'afterkeydown'" rows="2" cols="70" class="mofo_title_blurred" onfocus="this.setAttribute('class','mofo_title_focused')" onblur="this.setAttribute('class','mofo_title_blurred')">This is an Example of a Title Tag that is Seventy Characters in Length</textarea>
+                    </div>
+                    <div class="mofo_col2">
+                        <div data-bind="text: titleCount" id="mofo_title_count"></div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <!-- URL input -->
+                <div class="mofo_url_container">
+                    <div class="mofo_col1">
+                        <textarea data-bind="value: urlIn, valueUpdate: 'afterkeydown'" rows="1" cols="70" class="mofo_url_blurred" onfocus="this.setAttribute('class','mofo_url_focused')" onblur="this.setAttribute('class','mofo_url_blurred')">www.seomofo.com/snippet-optimizer.html</textarea>
+                    </div>
+                    <div class="mofo_col2">
+                        <!--<div data-bind="html: titleCount" id="mofo_title_count"></div>-->
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <!-- Description input -->
+                <div class="mofo_description_container">
+                    <div class="mofo_col1">
+                        <textarea data-bind="value: descriptionIn, valueUpdate: 'afterkeydown'" rows="3" cols="70" class="mofo_description_blurred" onfocus="this.setAttribute('class','mofo_description_focused')" onblur="this.setAttribute('class','mofo_description_blurred')">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</textarea>
+                    </div>
+                    <div class="mofo_col2">
+                        <div data-bind="text: snippetCount" id="mofo_snippet_count"></div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <!-- Date input -->
+                <div class="mofo_date_container">
+                    <input data-bind="value: dateIn, valueUpdate: 'afterkeydown'" class="mofo_date_picker" />
+                </div>
+
+                <!-- Add listing / delete listing -->
+                <div class="mofo_buttons_container">
+                    <div class="mofo_add_listing">
+                        <button data-bind="click: $root.addListing" class="k-button"><span class="mofo_button_icon mofo_icon_plus"></span>Add a Listing</button>
+                    </div>
+                    <div class="mofo_delete_listing">
+                        <button data-bind="click: $root.deleteListing" class="k-button"><span class="mofo_button_icon mofo_icon_minus"></span>Delete this Listing</button>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <div class="mofo_arrow mofo_icon mofo_icon_down_arrow"></div>
+
+            </div>
+
+        </div>
+        <!-- END Form -->
+
+
+
+        <!-- BEGIN Listing -->
+        <div class="vsc" data-bind="event: {mouseover: showEdit, mouseout: hideEdit}, click: toggleListingForm">
+            <h3 class="r"><a href="javascript:return false;" class="l"><span data-bind="text: titleIn">This is an Example of a Title Tag that is Seventy Characters in Length</span></a></h3>
+            <div class="vspib" aria-label="Result details" role="button" tabindex="0">
+                <div class="vspii">
+                    <div class="vspiic"></div>
+                </div>
+            </div>
+            <div class="s">
+                <div class="f kv">
+                    <cite><span data-bind="text: urlIn">www.seomofo.com/snippet-optimizer.html</span></cite>
+                    <span class="vshid"><a href="#">Cached</a>&nbsp;-&nbsp;<a href="#">Similar</a></span>
+                </div>
+                <span class="st"><span data-bind="html: dateOut" class="f"></span><span data-bind="text: descriptionOut">Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.</span></span>
+            </div>
+        </div>
+        <!-- END Listing -->
+
+
+    </li>
+</ol>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="bottomads"></div>
+                            <div class="med" id="extrares"></div>
+                        </div>
+                        <div id="rhscol"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END GOOGLE CONTENT -->
+</div>
+
+
+<div id="mofo_footer">
+    
+</div>
+
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    // Initialize KendoUI widgets
+    $(document).ready(function() {
+
+        $("#mofo_title_limit").kendoNumericTextBox({
+            value: 70,
+            min: 1,
+            step: 1,
+            format: "n0",
+            decimals: 0,
+            // The 'spin' configuration defines a callback to execute when the 
+            // up and down arrows are clicked. Knockout.js only updates the UI 
+            // when the input element changes--and that change event doesn't 
+            // register until the input element loses focus or a keyboard key 
+            // has been pressed. Clicking one of the arrow buttons generated by 
+            // KendoUI doesn't generate a change event, so I force it here by 
+            // manually causing the input element to lose focus every time an 
+            // arrow button is clicked.
+            spin: function(e) {
+                $(document.activeElement).blur();
+            }
+         });
+        $("#mofo_snippet_limit").kendoNumericTextBox({
+            value: 156,
+            min: 1,
+            step: 1,
+            format: "n0",
+            decimals: 0,
+            spin: function(e) {
+                $(document.activeElement).blur();
+            }
+         });
+
+        $('#mofo_splitter').kendoSplitter({
+            panes: [
+                {   // Header
+                    collapsible: true,
+                    resizable: true,
+                    size: '300px'
+                },
+                {   // Body (Google SERP content)
+                    collapsible: false,
+                    resizable: true,
+                },
+                {   // Footer
+                    collapsible: true,
+                    resizable: true,
+                    size: '160px'
+                }
+            ],
+            orientation: 'vertical'
+        });
+    
+        $('.mofo_date_picker').kendoDatePicker({
+            value: '',
+            format: 'MMM d, yyyy'
+        });
+    });
+    //]]>
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    // Custom binding for animated visibility transitions
+    // http://knockoutjs.com/documentation/custom-bindings.html
+    ko.bindingHandlers.slideVisible = {
+        update: function(element, valueAccessor, allBindingsAccessor) {
+            // First get the latest data that we're bound to
+            var value = valueAccessor(), allBindings = allBindingsAccessor();
+
+            // Next, whether or not the supplied model property is observable, get its current value
+            var valueUnwrapped = ko.utils.unwrapObservable(value); 
+
+            // Grab some more data from another binding property
+            // 400ms is default duration unless otherwise specified
+            var duration = allBindings.slideDuration || 400;
+
+            // Now manipulate the DOM element
+            if (valueUnwrapped == true) {
+                // Make the element visible
+                $(element).slideDown(duration);
+            }
+            else {
+                // Make the element invisible
+                $(element).slideUp(duration);
+            }
+        }
+    };
+
+    function SerpListing() {
+        var self = this;
+
+        // Title
+        self.titleIn = ko.observable("This is an Example of a Title Tag that is Seventy Characters in Length");
+        self.titleCount = ko.computed(function() {
+            return self.titleIn().replace(/^\s+|\s+$/g,'').length;
+        }, this);
+
+        // URL
+        self.urlIn = ko.observable("www.seomofo.com/snippet-optimizer.html");
+
+        // Date
+        self.dateIn = ko.observable('');
+        self.dateOut = ko.computed(function() {
+            if (this.dateIn().replace(/\s/g,'') != '') {
+                return this.dateIn() + ' &ndash; ';
+            }
+            else {
+                return '';
+            }
+        }, this);
+
+        // Description
+        self.descriptionIn = ko.observable("Here is an example of what a snippet looks like in Google's SERPs. The content that appears here is usually taken from the Meta Description tag if relevant.");
+
+
+        // Snippet
+        self.snippet = ko.computed(function() {
+            return self.dateOut() + self.descriptionIn();
+        }, this);
+
+        self.snippetCount = ko.computed(function() {
+            return self.snippet().length;
+        }, this);
+
+
+        self.descriptionOut = ko.computed(function() {
+            return self.descriptionIn();
+        }, this);
+
+        
+        // ListingForm visibility
+        self.showingListingForm = ko.observable(true);
+        self.toggleListingForm = function() {
+            if (self.showingListingForm()) {
+                self.showingListingForm(false);
+            }
+            else {
+                self.showingListingForm(true);
+                self.showingEdit(false);
+            }
+        };
+
+        // showEdit visibility
+        self.showingEdit = ko.observable(false);
+        self.showEdit = function() {
+            if (self.showingListingForm() == false) {
+                self.showingEdit(true);
+            }
+        };
+        self.hideEdit = function() {
+            if (self.showingListingForm() == false) {
+                self.showingEdit(false);
+            }
+        };
+
+    }
+
+    // Overall viewmodel for this screen, along with initial state
+    function SerpViewModel() {
+        var self = this;
+
+//        self.titleLimit = ko.observable(70);
+//        self.snippetLimit = ko.observable(156);
+
+        self.listings = ko.observableArray([
+            new SerpListing()
+        ]);
+
+        self.addListing = function() {
+            self.listings.push(new SerpListing());
+            // KendoUI datePicker widget has to be reinitialized for each new instance
+            $('.mofo_date_picker').last().kendoDatePicker({
+                value: '',
+                format: 'MMM d, yyyy'
+            });
+        };
+
+        // http://knockoutjs.com/documentation/foreach-binding.html#note_5_postprocessing_or_animating_the_generated_dom_elements
+        self.slideUpListing = function(nodeToRemove) {
+            $(nodeToRemove).closest('li.g').slideUp(function() {
+                $(nodeToRemove).remove();
+            })
+        };
+
+        self.deleteListing = function(listing) {
+            self.listings.remove(listing);
+        };
+        
+    }
+    ko.applyBindings(new SerpViewModel());
+
+    //]]>
+</script>
+
     <div id="applicationHost"></div>
     <script type="text/javascript" src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="lib/knockout/knockout.js"></script>
