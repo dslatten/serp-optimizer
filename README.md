@@ -7,10 +7,10 @@
 <p>This application uses the following libraries:</p>
 
 <ul>
-    <li><a href="http://jquery.com/">jQuery</a>&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js">CDN</a></li>
-    <li><a href="http://jqueryui.com/">jQuery UI</a>&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js">CDN</a></li>
-    <li><a href="http://knockoutjs.com/">Knockout</a>&#x00a0;&#x00a0;<a href="https://github.com/SteveSanderson/knockout/">git</a>&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js">CDN</a></li>
-    <li><a href="http://sammyjs.org/">Sammy</a>&#x00a0;&#x00a0;<a href="https://github.com/quirkey/sammy">git</a>&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/sammy.js/0.7.4/sammy.min.js">CDN</a></li>
-    <li><a href="http://requirejs.org/">RequireJS</a>&#x00a0;&#x00a0;<a href="https://github.com/jrburke/requirejs">git</a>&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js">CDN</a></li>
-    <li><a href="http://durandaljs.com/">Durandal</a>&#x00a0;&#x00a0;<a href="https://github.com/BlueSpire/Durandal">git</a></li>
+    <li><strong>jQuery</strong>&#x00a0;&#x00a0;&#x00a0;<a href="http://jquery.com/">Home</a>&#x00a0;&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js">CDN</a></li>
+    <li><strong>jQuery UI</strong>&#x00a0;&#x00a0;&#x00a0;<a href="http://jqueryui.com/">Home</a>&#x00a0;&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js">CDN</a></li>
+    <li><strong>Knockout</strong>&#x00a0;&#x00a0;&#x00a0;<a href="http://knockoutjs.com/">Home</a>&#x00a0;&#x00a0;&#x00a0;<a href="https://github.com/SteveSanderson/knockout/">Git</a>&#x00a0;&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js">CDN</a></li>
+    <li><strong>Sammy</strong>&#x00a0;&#x00a0;&#x00a0;<a href="http://sammyjs.org/">Home</a>&#x00a0;&#x00a0;&#x00a0;<a href="https://github.com/quirkey/sammy">Git</a>&#x00a0;&#x00a0;&#x00a0;<a href="//cdnjs.cloudflare.com/ajax/libs/sammy.js/0.7.4/sammy.min.js">CDN</a></li>
+    <li><strong>RequireJS</strong>&#x00a0;&#x00a0;&#x00a0;<a href="http://requirejs.org/">Home</a>&#x00a0;&#x00a0;&#x00a0;<a href="https://github.com/jrburke/requirejs">Git</a></li>
+    <li><strong>Durandal</strong>&#x00a0;&#x00a0;&#x00a0;<a href="http://durandaljs.com/">Home</a>&#x00a0;&#x00a0;&#x00a0;<a href="https://github.com/BlueSpire/Durandal">Git</a></li>
 </ul>
