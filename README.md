@@ -9,5 +9,5 @@
 <ul>
     <li><a href="http://jquery.com/">jQuery</a></li>
     <li><a href="http://jqueryui.com/">jQuery UI</a></li>
-    <li><a href="http://knockoutjs.com/">Knockout</a>&#x00a0;<a href="https://github.com/SteveSanderson/knockout/"><span class="mini-icon mini-icon-blacktocat"></span></a></li>
+    <li><a href="http://knockoutjs.com/">Knockout</a>&#x00a0;<a href="https://github.com/SteveSanderson/knockout/"><span class="mini-icon mini-icon-blacktocat">&#x00a0;</span></a></li>
 </ul>
