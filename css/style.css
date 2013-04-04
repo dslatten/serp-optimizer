@@ -69,7 +69,7 @@ input:focus {
 \* ========================================================================== */
 
 #mofo_header {
-    background-color: #eaf4f9;
+    background-color: #e6f7ff;
 }
     #mofo_intro {
         
@@ -80,7 +80,7 @@ input:focus {
             font-size: 64px;
             font-family: Georgia, serif;
             font-weight: bold;
-            color: #004766;
+            color: #046;
         }
         #mofo_intro h2 {
             margin-top: 0;
@@ -339,7 +339,7 @@ input:focus {
 \* ========================================================================== */
 
 #mofo_footer {
-    background: url("img/bg-footer.png") #004766;
+    background: url("img/bg-footer.png") #046;
 }
 
 
