@@ -1,14 +1,24 @@
 ﻿require.config({
     enforceDefine: true,
+    baseUrl: '',
     paths: {
+        // RequireJS loader plugins
         text: [
-            'durandal/amd/text'
+            '/lib/require-text/text'
         ],
+        css: [
+            '/lib/require-css/css'
+        ],
+        // Durandal modules
+        durandal: [
+            'lib/durandal'
+        ],
+        // CDN-hosted 3rd-party libs + local fallbacks
         jquery: [
             '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min',
             '/lib/jquery/jquery'
         ],
-        jqueryUI: [
+        jqueryUi: [
             '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min',
             '/lib/jquery-ui/js/jquery-ui'
         ],
@@ -22,7 +32,7 @@
         ]
     },
     shim: {
-        'jqueryUI': {
+        'jqueryUi': {
             deps: ['jquery'],
             exports: 'jQuery.ui'
         }
@@ -30,22 +40,19 @@
 });
 
 define(['jquery'],
-    function($) {
-        require(['knockout', 'jqueryUI'],
-            function(ko) {
-                require(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router'],
-                    function(app, viewLocator, system, router) {
-                        system.debug(true);
-                        app.start().then(function() {
-                            viewLocator.useConvention();
-                            router.useConvention();
-                            router.mapNav('home');
-                            app.adaptToDevice();
-                            app.setRoot('viewmodels/shell');
-                        });
-                    }
-                );                
-            }
-        );
-    }
-);
+function($) {
+    require(['knockout', 'jqueryUi'],
+    function(ko) {
+        require(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router'],
+        function(app, viewLocator, system, router) {
+            system.debug(true);
+            app.start().then(function() {
+                viewLocator.useConvention('app/viewmodels', 'app/views');
+                router.useConvention('app/routes');
+                router.mapNav('home');
+                app.adaptToDevice();
+                app.setRoot('app/viewmodels/shell');
+            });
+        });                
+    });
+});
