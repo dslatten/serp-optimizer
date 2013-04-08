@@ -11,11 +11,13 @@
         html.className = classes ? classes + ' js' : 'js';
     }
 
+
     // Add scripts that have to be in the <head> (i.e., before page begins to render)
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.src = 'lib/conditionizr/conditionizr.js';
     document.getElementsByTagName('head')[0].appendChild(s);
+
 
 /* ========================================================================== *\
     Execute on page load
@@ -70,13 +72,13 @@
             }
         };
 
-        // Load RequireJS and initiate app
-        (function() {
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.src = 'lib/require/require.js';
-            document.getElementsByTagName('head')[0].appendChild(s);
-        });
+
+        // Load RequireJS
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'lib/require/require.js';
+        document.getElementsByTagName('head')[0].appendChild(s);
+
 
         // Conditionizr config
         conditionizr({
@@ -102,6 +104,7 @@
         });
 
     }
+
 
 /* ========================================================================== *\
     Attach lazyFunction() to onload event
