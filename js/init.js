@@ -71,10 +71,12 @@
         };
 
         // Load RequireJS and initiate app
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.src = 'lib/require/require.js';
-        document.getElementsByTagName('head')[0].appendChild(s);
+        (function() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = 'lib/require/require.js';
+            document.getElementsByTagName('head')[0].appendChild(s);
+        })();
 
         // Conditionizr config
         conditionizr({
