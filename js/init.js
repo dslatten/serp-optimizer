@@ -23,7 +23,7 @@
     Execute on page load
 \* ========================================================================== */
 
-    var lazyFunction = function() {
+    window.onload = function() {
 
         // RequireJS config
         require = {
@@ -110,17 +110,17 @@
     Attach lazyFunction() to onload event
 \* ========================================================================== */
 
-    var oldOnload = window.onload;
-    if (typeof window.onload != 'function') {
-        window.onload = lazyFunction;
-    }
-    else {
-        window.onload = function() {
-            lazyFunction();
-            if (oldOnload) {
-                oldOnload();
-            }
-        }
-    }
+    // var oldOnload = window.onload;
+    // if (typeof window.onload != 'function') {
+    //     window.onload = lazyFunction;
+    // }
+    // else {
+    //     window.onload = function() {
+    //         lazyFunction();
+    //         if (oldOnload) {
+    //             oldOnload();
+    //         }
+    //     }
+    // }
 
 })();
