@@ -13,10 +13,10 @@
 
 
     // Add scripts that have to be in the <head> (i.e., before page begins to render)
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = 'lib/conditionizr/conditionizr.js';
-    document.getElementsByTagName('head')[0].appendChild(s);
+    // var s = document.createElement('script');
+    // s.type = 'text/javascript';
+    // s.src = 'lib/conditionizr/conditionizr.js';
+    // document.getElementsByTagName('head')[0].appendChild(s);
 
 
 /* ========================================================================== *\
@@ -81,27 +81,27 @@
 
 
         // Conditionizr config
-        conditionizr({
-            debug      : false,
-            scriptSrc  : 'js/',
-            styleSrc   : 'css/',
-            ieLessThan : { active: false, version: '9', scripts: false, styles: false, classes: false, customScript: false },
-            safari     : { scripts: false, styles: false, classes:  true, customScript: false },
-            chrome     : { scripts: false, styles: false, classes:  true, customScript: false },
-            opera      : { scripts: false, styles: false, classes:  true, customScript: false },
-            firefox    : { scripts: false, styles: false, classes:  true, customScript: false },
-            ie10       : { scripts: false, styles: false, classes:  true, customScript: false },
-            ie9        : { scripts: false, styles: false, classes:  true, customScript: false },
-            ie8        : { scripts: false, styles: false, classes:  true, customScript: false },
-            ie7        : { scripts: false, styles: false, classes:  true, customScript: false },
-            ie6        : { scripts: false, styles: false, classes:  true, customScript: false },
-            retina     : { scripts: false, styles: false, classes: false, customScript: false },
-            touch      : { scripts: false, styles: false, classes: false, customScript: false },
-            mac        : false,
-            win        : false,
-            x11        : false,
-            linux      : false
-        });
+        // conditionizr({
+        //     debug      : false,
+        //     scriptSrc  : 'js/',
+        //     styleSrc   : 'css/',
+        //     ieLessThan : { active: false, version: '9', scripts: false, styles: false, classes: false, customScript: false },
+        //     safari     : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     chrome     : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     opera      : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     firefox    : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     ie10       : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     ie9        : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     ie8        : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     ie7        : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     ie6        : { scripts: false, styles: false, classes:  true, customScript: false },
+        //     retina     : { scripts: false, styles: false, classes: false, customScript: false },
+        //     touch      : { scripts: false, styles: false, classes: false, customScript: false },
+        //     mac        : false,
+        //     win        : false,
+        //     x11        : false,
+        //     linux      : false
+        // });
 
     }
 
