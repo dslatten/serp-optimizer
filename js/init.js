@@ -76,7 +76,7 @@
             s.type = 'text/javascript';
             s.src = 'lib/require/require.js';
             document.getElementsByTagName('head')[0].appendChild(s);
-        })();
+        });
 
         // Conditionizr config
         conditionizr({
