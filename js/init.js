@@ -25,6 +25,8 @@
 
     window.onload = function() {
 
+        alert('Page is loaded.');
+
         // RequireJS config
         require = {
             enforceDefine: false,
