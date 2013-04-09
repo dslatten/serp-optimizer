@@ -23,7 +23,7 @@
     Execute on page load
 \* ========================================================================== */
 
-    lazyFunction = function() {
+    var lazyFunction = function() {
 
         // RequireJS config
         require = {
