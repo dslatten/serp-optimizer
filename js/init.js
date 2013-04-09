@@ -66,7 +66,7 @@
             },
             deps: ['jQuery', 'knockout', 'sammy'],
             callback: function() {
-                require(['require'], function($, ko) {
+                require(['require'], function(jQuery, ko) {
                     require(['app/main']);
                 })
             }
