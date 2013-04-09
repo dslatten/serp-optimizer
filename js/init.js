@@ -64,9 +64,9 @@
                     exports: 'jQuery.ui'
                 }
             },
-            deps: ['jQuery', 'knockout', 'sammy'],
+            deps: ['jQuery', 'knockout'],
             callback: function() {
-                require(['require'], function(jQuery, ko) {
+                require(['require'], function(require) {
                     require(['app/main']);
                 })
             }
