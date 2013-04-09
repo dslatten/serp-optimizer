@@ -25,8 +25,6 @@
 
     lazyFunction = function() {
 
-        alert('Page is loaded.');
-
         // RequireJS config
         require = {
             enforceDefine: false,
@@ -66,9 +64,9 @@
                     exports: 'jQuery.ui'
                 }
             },
-            deps: ['jQuery'],
+            deps: ['jQuery', 'knockout', 'sammy'],
             callback: function() {
-                require(['knockout', 'require'], function($) {
+                require(['require'], function($, ko) {
                     require(['app/main']);
                 })
             }
