@@ -23,7 +23,7 @@
     Execute on page load
 \* ========================================================================== */
 
-    window.onload = function() {
+    lazyFunction = function() {
 
         alert('Page is loaded.');
 
@@ -112,17 +112,17 @@
     Attach lazyFunction() to onload event
 \* ========================================================================== */
 
-    // var oldOnload = window.onload;
-    // if (typeof window.onload != 'function') {
-    //     window.onload = lazyFunction;
-    // }
-    // else {
-    //     window.onload = function() {
-    //         lazyFunction();
-    //         if (oldOnload) {
-    //             oldOnload();
-    //         }
-    //     }
-    // }
+    var oldOnload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = lazyFunction;
+    }
+    else {
+        window.onload = function() {
+            lazyFunction();
+            if (oldOnload) {
+                oldOnload();
+            }
+        }
+    }
 
 })();
