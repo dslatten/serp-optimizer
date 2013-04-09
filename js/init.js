@@ -66,7 +66,7 @@
             },
             deps: ['jQuery'],
             callback: function() {
-                require(['jQuery', 'require'], function($) {
+                require(['knockout', 'require'], function($) {
                     require(['app/main']);
                 })
             }
