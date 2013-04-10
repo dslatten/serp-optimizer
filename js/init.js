@@ -30,51 +30,51 @@
     function lazyFunction() {
 
         // RequireJS config
-        require = {
-            enforceDefine: false,
-            paths: {
-                // RequireJS loader plugins
-                text: [
-                    '/lib/require-text/text'
-                ],
-                css: [
-                    '/lib/require-css/css'
-                ],
-                // Durandal modules
-                durandal: [
-                    '/lib/durandal'
-                ],
-                // CDN-hosted 3rd-party libs + local fallbacks
-                jQuery: [
-                    '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min',
-                    '/lib/jquery/jquery'
-                ],
-                jQueryUi: [
-                    '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min',
-                    '/lib/jquery-ui/js/jquery-ui'
-                ],
-                knockout: [
-                    '//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min',
-                    '/lib/knockout/knockout'
-                ],
-                sammy: [
-                    '//cdnjs.cloudflare.com/ajax/libs/sammy.js/0.7.4/sammy.min',
-                    '/lib/sammy/sammy'
-                ]
-            },
-            shim: {
-                'jQueryUi': {
-                    deps: ['jQuery'],
-                    exports: 'jQuery.ui'
-                }
-            },
-            deps: ['jQuery', 'knockout'],
-            callback: function() {
-                require(['require'], function(require) {
-                    require(['app/main']);
-                })
-            }
-        };
+        // require = {
+        //     enforceDefine: false,
+        //     paths: {
+        //         // RequireJS loader plugins
+        //         text: [
+        //             '/lib/require-text/text'
+        //         ],
+        //         css: [
+        //             '/lib/require-css/css'
+        //         ],
+        //         // Durandal modules
+        //         durandal: [
+        //             '/lib/durandal'
+        //         ],
+        //         // CDN-hosted 3rd-party libs + local fallbacks
+        //         jQuery: [
+        //             '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min',
+        //             '/lib/jquery/jquery'
+        //         ],
+        //         jQueryUi: [
+        //             '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min',
+        //             '/lib/jquery-ui/js/jquery-ui'
+        //         ],
+        //         knockout: [
+        //             '//cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min',
+        //             '/lib/knockout/knockout'
+        //         ],
+        //         sammy: [
+        //             '//cdnjs.cloudflare.com/ajax/libs/sammy.js/0.7.4/sammy.min',
+        //             '/lib/sammy/sammy'
+        //         ]
+        //     },
+        //     shim: {
+        //         'jQueryUi': {
+        //             deps: ['jQuery'],
+        //             exports: 'jQuery.ui'
+        //         }
+        //     },
+        //     deps: ['jQuery', 'knockout'],
+        //     callback: function() {
+        //         require(['require'], function(require) {
+        //             require(['app/main']);
+        //         })
+        //     }
+        // };
 
 
         // Load RequireJS
