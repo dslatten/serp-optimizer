@@ -80,6 +80,7 @@
         // Load RequireJS
         var s = document.createElement('script');
         s.type = 'text/javascript';
+        s.setAttribute('data-main', 'app/main');
         s.src = 'lib/require/require.js';
         document.getElementsByTagName('head')[0].appendChild(s);
 
