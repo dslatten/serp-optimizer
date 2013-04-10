@@ -37,12 +37,6 @@ require.config({
             deps: ['jQuery'],
             exports: 'jQuery.ui'
         }
-    },
-    deps: ['jQuery', 'knockout'],
-    callback: function() {
-        require(['require'], function(require) {
-            require(['app/main']);
-        })
     }
 });
 
