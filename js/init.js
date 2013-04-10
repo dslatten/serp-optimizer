@@ -1,8 +1,8 @@
-(function() {
-
 /* ========================================================================== *\
     Execute immediately
 \* ========================================================================== */
+
+(function() {
 
     // Add "js" class to <html>, to allow for CSS styles that should only apply to clients with JavaScript support.
     var html = document.getElementsByTagName('html')[0];
@@ -17,6 +17,8 @@
     // s.type = 'text/javascript';
     // s.src = 'lib/conditionizr/conditionizr.js';
     // document.getElementsByTagName('head')[0].appendChild(s);
+
+}());
 
 
 /* ========================================================================== *\
@@ -123,4 +125,3 @@
         }
     }
 
-})();
